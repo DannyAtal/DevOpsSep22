@@ -136,10 +136,14 @@ class TestMatrixAvg(unittest.TestCase):
     """
     2 Katas
     """
+    def test_negativenum_matrix_avg(mat, rows=None):
+        self.assertEqual(questions.matrix_avg([[1, 2, 3], [4, -5, 6], [7, 8, 9]]), [3.888888888888889])
 
-    def test_sample(self):
-        # your code here
-        pass
+    def test_empty_matrix_avg(mat, rows=None):
+            self.assertEqual(questions.matrix_avg([[], [], []]), [])
+
+    def test_allzeros_matrix_avg(mat, rows=None):
+        self.assertEqual(questions.matrix_avg([[0, 0, 0], [0, 0, 0], [0, 0, 0]]), [0])
 
 #Vitaly
 class TestMergeSortedLists(unittest.TestCase):
