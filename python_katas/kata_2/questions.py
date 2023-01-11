@@ -470,7 +470,7 @@ def pascal_triangle(lines):
          print(factorial(i) // (factorial(j) * factorial(i - j)), end=" ")
         # for new line
         print()
-    return (lines)
+    return None
 
 
 def list_flatten(lst):
